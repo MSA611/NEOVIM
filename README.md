@@ -5,7 +5,7 @@
 - For Linux And MacOS
 
 ```
-git clone https://github.com/MSA611/NEOVIM ~/.config/nvim && nvim
+git clone https://github.com/MSA611/NEOVIM ~/.config/nvim --depth 1 && nvim
 
 ```
 
