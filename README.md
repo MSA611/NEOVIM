@@ -2,7 +2,7 @@
 
 ![NEOVIM DASH](./NEOVIM.png)
 
-- For Linux
+- For Linux And MacOS
 
 ```
 git clone https://github.com/MSA611/NEOVIM ~/.config/nvim && nvim
