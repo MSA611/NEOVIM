@@ -1,4 +1,6 @@
-#Neovim
+# NEOVIM
+
+![Neovim](NEOVIM.png)
 
 ### For Linux And MacOS
 
@@ -197,4 +199,3 @@ NeoTree keymaps are configured within the plugin itself. Open NeoTree and press 
 - Main keymap configuration: `lua/config/keymaps.lua`
 - Which-key configuration: `lua/plugins/whichKey.lua`
 - Plugin-specific keymaps are defined in their respective plugin files in `lua/plugins/`
-
