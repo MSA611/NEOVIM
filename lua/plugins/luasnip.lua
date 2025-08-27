@@ -6,10 +6,8 @@ return {
 		event = "InsertEnter",
 		config = function()
 			local luasnip = require("luasnip")
-			
 			-- Load snippets from friendly-snippets if you want
 			-- require("luasnip.loaders.from_vscode").lazy_load()
-			
 			-- Basic configuration
 			luasnip.config.setup({
 				history = true,
@@ -19,3 +17,4 @@ return {
 		end,
 	},
 }
+
