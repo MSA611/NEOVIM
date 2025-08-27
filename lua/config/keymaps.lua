@@ -8,6 +8,9 @@ vim.keymap.set("n", "<C-t>", "<Cmd>ToggleTerm dir=%:p:h<CR>", { desc = "ToggleTe
 vim.keymap.set("t", "<C-t>", "<Cmd>ToggleTerm dir=%:p:h<CR>", { desc = "ToggleTerm float" })
 vim.keymap.set({ "n", "v" }, "y", [["+y]])
 
+vim.keymap.set("n", "<c-t>", "<Cmd>ToggleTerm dir=%:p:n direction=float<CR>") -- floating terminal
+vim.keymap.set("t", "<c-t>", "<Cmd>ToggleTerm dir=%:p:n direction=float<CR>") -- floating terminal
+
 -- better up/down
 vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
 vim.keymap.set({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
