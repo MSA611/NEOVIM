@@ -4,6 +4,7 @@ vim.keymap.set({ "n", "v" }, "<leader>cf", function()
 	require("conform").format({ timeout_ms = 3000 })
 end, { desc = "Format file or selection" })
 
+vim.keymap.set("n", "<Esc>", ":nohlsearch<CR><Esc>", { noremap = true, silent = true }) -- to disable highlighting in esc
 -- commenting
 vim.keymap.set("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comment Below" })
 vim.keymap.set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comment Above" })

@@ -25,7 +25,7 @@ vim.opt.list = true -- show tab characters and trailing whitespace
 vim.opt.formatoptions:remove("t") -- no auto-intent of line breaks, keep line wrap enabled
 vim.opt.listchars = "tab:»\\ ,extends:›,precedes:‹,nbsp:·,trail:·" -- show tab characters and trailing whitespace
 
-vim.opt.ignorecase = true -- ignore case when searching
+vim.opt.ignorecase = false -- ignore case when searching
 vim.opt.smartcase = true -- unless capital letter in search
 
 vim.opt.swapfile = false -- do not use a swap file for the buffer
@@ -33,7 +33,7 @@ vim.opt.backup = false -- do not keep a backup file
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- set directory where undo files are stored
 vim.opt.undofile = true -- save undo history to a file
 
-vim.opt.hlsearch = false -- do not highlight all matches on previous search pattern
+vim.opt.hlsearch = true -- do not highlight all matches on previous search pattern
 vim.opt.incsearch = true -- incrementally highlight searches as you type
 
 vim.opt.termguicolors = true -- enable true color support
