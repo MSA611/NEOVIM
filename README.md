@@ -196,6 +196,7 @@ NeoTree keymaps are configured within the plugin itself. Open NeoTree and press 
 
 ## Configuration Files
 
+- To Make Snacks Picker to show hidden files use Alt+h and to show the .gitignore files Alt+i
 - Main keymap configuration: `lua/config/keymaps.lua`
 - Which-key configuration: `lua/plugins/whichKey.lua`
 - Plugin-specific keymaps are defined in their respective plugin files in `lua/plugins/`
