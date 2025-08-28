@@ -6,13 +6,8 @@ vim.opt.nu = true -- enable line numbers
 vim.opt.relativenumber = true -- relative line numbers
 vim.opt.cursorline = true --Setting Cursor Line
 
---setting up the colors for the lines and the line number
 vim.opt.cursorline = true
-
--- vim.api.nvim_set_hl(0, "CursorLine", { bg = "#2a2a2a" }) --sets the color of the cursorline to
--- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFD700", bold = true }) --sets the color of the normal line in which the cursor is present to yello
-
--- vim.api.nvim_set_hl(0, "LineNr", { fg = "#ffffff" }) --set Line Number color  in which the cursor is present to white
+--setting up the colors for the lines and the line number
 
 -- Gold/yellow color and bold for active line number (cursor line)
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFD700", bold = true })

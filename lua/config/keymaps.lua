@@ -4,6 +4,48 @@ vim.keymap.set({ "n", "v" }, "<leader>cf", function()
 	require("conform").format({ timeout_ms = 3000 })
 end, { desc = "Format file or selection" })
 
+-- commenting
+vim.keymap.set("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comment Below" })
+vim.keymap.set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comment Above" })
+
+vim.keymap.set("i", "jj", "<Esc>") --Setting jj as Esc
+
+--quickfix list
+vim.keymap.set("n", "<leader>xq", function()
+	local success, err = pcall(vim.fn.getqflist({ winid = 0 }).winid ~= 0 and vim.cmd.cclose or vim.cmd.copen)
+	if not success and err then
+		vim.notify(err, vim.log.levels.ERROR)
+	end
+end, { desc = "Quickfix List" })
+
+-- diagnostic
+local diagnostic_goto = function(next, severity)
+	local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
+	severity = severity and vim.diagnostic.severity[severity] or nil
+	return function()
+		go({ severity = severity })
+	end
+end
+vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+vim.keymap.set("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
+vim.keymap.set("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
+vim.keymap.set("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
+vim.keymap.set("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
+vim.keymap.set("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
+vim.keymap.set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
+
+-- location list
+vim.keymap.set("n", "<leader>xl", function()
+	local success, err = pcall(vim.fn.getloclist(0, { winid = 0 }).winid ~= 0 and vim.cmd.lclose or vim.cmd.lopen)
+	if not success and err then
+		vim.notify(err, vim.log.levels.ERROR)
+	end
+end, { desc = "Location List" })
+
+-- lazy
+vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+
+--for floating terminal
 vim.keymap.set("n", "<C-t>", "<Cmd>ToggleTerm dir=%:p:h<CR>", { desc = "ToggleTerm float " })
 vim.keymap.set("t", "<C-t>", "<Cmd>ToggleTerm dir=%:p:h<CR>", { desc = "ToggleTerm float" })
 vim.keymap.set({ "n", "v" }, "y", [["+y]])
