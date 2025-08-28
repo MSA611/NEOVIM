@@ -25,33 +25,8 @@ return {
 		opts = {
 			highlight = { enable = true },
 			indent = { enable = true },
+			ensure_installed = {},
 			auto_install = true,
-			ensure_installed = {
-				"bash",
-				"c",
-				"diff",
-				"html",
-				"javascript",
-				"jsdoc",
-				"json",
-				"jsonc",
-				"lua",
-				"luadoc",
-				"luap",
-				"markdown",
-				"markdown_inline",
-				"printf",
-				"python",
-				"query",
-				"regex",
-				"toml",
-				"tsx",
-				"typescript",
-				"vim",
-				"vimdoc",
-				"xml",
-				"yaml",
-			},
 			incremental_selection = {
 				enable = true,
 				keymaps = {
@@ -61,6 +36,7 @@ return {
 					node_decremental = "<bs>",
 				},
 			},
+
 			textobjects = {
 				move = {
 					enable = true,
