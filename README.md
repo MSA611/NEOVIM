@@ -143,10 +143,10 @@ This document provides a comprehensive overview of all keymaps configured in thi
 | `<leader>b`     | buffer               | Buffer management           |
 | `<leader>w`     | windows              | Window management           |
 
-## Special Keymaps
+# Special Keymaps
 
-| Mode | Keymap         | Action               | Description                                   |
-| ---- | -------------- | -------------------- | --------------------------------------------- |
+ Mode | Keymap         | Action               | Description                                   |
+|---- | -------------- | -------------------- | --------------------------------------------- |
 | n    | `<leader>?`    | Show buffer keymaps  | Display which-key for current buffer          |
 | n    | `<C-w><space>` | Window hydra mode    | Enter window management mode                  |
 | n    | `gx`           | Open with system app | Open file/URL with default system application |
