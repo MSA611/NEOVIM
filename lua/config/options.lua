@@ -1,4 +1,3 @@
-vim.cmd("colorscheme onedark_dark") --setup the colorscheme
 
 -- Gold/yellow color and bold for active line number (cursor line)
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFD700", bold = true })
