@@ -1,10 +1,10 @@
-
 -- Gold/yellow color and bold for active line number (cursor line)
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFD700", bold = true })
 
 -- Gray for inactive line numbers
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#808080" })
 
+vim.loader.enable() --impatient.nvim
 vim.opt.hlsearch = true -- do not highlight all matches on previous search pattern
 vim.opt.incsearch = true -- incrementally highlight searches as you type
 

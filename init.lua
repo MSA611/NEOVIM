@@ -1,5 +1,3 @@
 require("config.options")
 require("config.keymaps")
 require("config.lazy")
-require("onedarkpro.config").set_theme("onedark_dark")
-require("onedarkpro").load()
