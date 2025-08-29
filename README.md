@@ -111,21 +111,21 @@ This document provides a comprehensive overview of all keymaps configured in thi
 
 ## Buffer Management
 
-| Mode | Keymap       | Action                 | Description                |
-| ---- | ------------ | ---------------------- | -------------------------- |
-| n    | `<S-h>`      | Previous buffer        | Switch to previous buffer  |
-| n    | `<S-l>`      | Next buffer            | Switch to next buffer      |
-| n    | `[b`         | Previous buffer        | Switch to previous buffer  |
-| n    | `]b`         | Next buffer            | Switch to next buffer      |
+| Mode | Keymap       | Action                 | Description                      |
+| ---- | ------------ | ---------------------- | -------------------------------- |
+| n    | `<S-h>`      | Previous buffer        | Switch to previous buffer        |
+| n    | `<S-l>`      | Next buffer            | Switch to next buffer            |
+| n    | `[b`         | Previous buffer        | Switch to previous buffer        |
+| n    | `]b`         | Next buffer            | Switch to next buffer            |
 | n    | `[B`         | Move buffer prev       | Move buffer to previous position |
-| n    | `]B`         | Move buffer next       | Move buffer to next position |
-| n    | `<leader>bb` | Switch to other buffer | Switch to last used buffer |
-| n    | `<leader>\`` | Switch to other buffer | Switch to last used buffer |
-| n    | `<leader>bd` | Delete buffer          | Delete current buffer      |
-| n    | `<leader>bp` | Toggle pin             | Pin/unpin current buffer   |
-| n    | `<leader>bP` | Delete non-pinned      | Delete all non-pinned buffers |
-| n    | `<leader>br` | Delete buffers right   | Delete buffers to the right |
-| n    | `<leader>bl` | Delete buffers left    | Delete buffers to the left |
+| n    | `]B`         | Move buffer next       | Move buffer to next position     |
+| n    | `<leader>bb` | Switch to other buffer | Switch to last used buffer       |
+| n    | `<leader>\`` | Switch to other buffer | Switch to last used buffer       |
+| n    | `<leader>bd` | Delete buffer          | Delete current buffer            |
+| n    | `<leader>bp` | Toggle pin             | Pin/unpin current buffer         |
+| n    | `<leader>bP` | Delete non-pinned      | Delete all non-pinned buffers    |
+| n    | `<leader>br` | Delete buffers right   | Delete buffers to the right      |
+| n    | `<leader>bl` | Delete buffers left    | Delete buffers to the left       |
 
 ## Window Management
 
@@ -137,163 +137,163 @@ This document provides a comprehensive overview of all keymaps configured in thi
 
 ## Diagnostics & Quickfix
 
-| Mode | Keymap       | Action              | Description                    |
-| ---- | ------------ | ------------------- | ------------------------------ |
-| n    | `<leader>cd` | Line diagnostics    | Show diagnostics for current line |
-| n    | `]d`         | Next diagnostic     | Go to next diagnostic          |
-| n    | `[d`         | Prev diagnostic     | Go to previous diagnostic      |
-| n    | `]e`         | Next error          | Go to next error               |
-| n    | `[e`         | Prev error          | Go to previous error           |
-| n    | `]w`         | Next warning        | Go to next warning             |
-| n    | `[w`         | Prev warning        | Go to previous warning         |
-| n    | `<leader>xq` | Quickfix list       | Toggle quickfix list           |
-| n    | `<leader>xl` | Location list       | Toggle location list           |
+| Mode | Keymap       | Action           | Description                       |
+| ---- | ------------ | ---------------- | --------------------------------- |
+| n    | `<leader>cd` | Line diagnostics | Show diagnostics for current line |
+| n    | `]d`         | Next diagnostic  | Go to next diagnostic             |
+| n    | `[d`         | Prev diagnostic  | Go to previous diagnostic         |
+| n    | `]e`         | Next error       | Go to next error                  |
+| n    | `[e`         | Prev error       | Go to previous error              |
+| n    | `]w`         | Next warning     | Go to next warning                |
+| n    | `[w`         | Prev warning     | Go to previous warning            |
+| n    | `<leader>xq` | Quickfix list    | Toggle quickfix list              |
+| n    | `<leader>xl` | Location list    | Toggle location list              |
 
 ## LSP Keymaps
 
-| Mode | Keymap       | Action                | Description                    |
-| ---- | ------------ | --------------------- | ------------------------------ |
-| n    | `gd`         | Go to definition      | Go to definition               |
-| n    | `gD`         | Go to declaration     | Go to declaration              |
-| n    | `gr`         | References            | Show references                |
-| n    | `gI`         | Go to implementation  | Go to implementation           |
-| n    | `gy`         | Go to type definition | Go to type definition          |
-| n    | `K`          | Hover                 | Show hover information         |
-| n    | `gi`         | Go to implementation  | Go to implementation           |
-| n    | `<C-k>`      | Signature help        | Show signature help            |
-| n    | `<space>wa`  | Add workspace folder  | Add workspace folder           |
-| n    | `<space>wr`  | Remove workspace folder | Remove workspace folder      |
-| n    | `<space>wl`  | List workspace folders | List workspace folders       |
-| n    | `<space>D`   | Type definition       | Go to type definition          |
-| n    | `<space>rn`  | Rename                | Rename symbol                  |
-| n,v  | `<space>ca`  | Code action           | Show code actions              |
-| n    | `<space>f`   | Format                | Format buffer                  |
-| n    | `<leader>cm` | Mason                 | Open Mason                     |
+| Mode | Keymap       | Action                  | Description             |
+| ---- | ------------ | ----------------------- | ----------------------- |
+| n    | `gd`         | Go to definition        | Go to definition        |
+| n    | `gD`         | Go to declaration       | Go to declaration       |
+| n    | `gr`         | References              | Show references         |
+| n    | `gI`         | Go to implementation    | Go to implementation    |
+| n    | `gy`         | Go to type definition   | Go to type definition   |
+| n    | `K`          | Hover                   | Show hover information  |
+| n    | `gi`         | Go to implementation    | Go to implementation    |
+| n    | `<C-k>`      | Signature help          | Show signature help     |
+| n    | `<space>wa`  | Add workspace folder    | Add workspace folder    |
+| n    | `<space>wr`  | Remove workspace folder | Remove workspace folder |
+| n    | `<space>wl`  | List workspace folders  | List workspace folders  |
+| n    | `<space>D`   | Type definition         | Go to type definition   |
+| n    | `<space>rn`  | Rename                  | Rename symbol           |
+| n,v  | `<space>ca`  | Code action             | Show code actions       |
+| n    | `<space>f`   | Format                  | Format buffer           |
+| n    | `<leader>cm` | Mason                   | Open Mason              |
 
 ## File & Find Operations (Snacks Picker)
 
-| Mode | Keymap           | Action                | Description                    |
-| ---- | ---------------- | --------------------- | ------------------------------ |
-| n    | `<leader><space>` | Smart find files     | Smart file finder              |
-| n    | `<leader>,`      | Buffers              | Show open buffers              |
-| n    | `<leader>/`      | Grep                 | Live grep search               |
-| n    | `<leader>:`      | Command history      | Show command history           |
-| n    | `<leader>e`      | File explorer        | Open file explorer             |
-| n    | `<leader>fb`     | Buffers              | Find buffers                   |
-| n    | `<leader>fc`     | Config files         | Find config files              |
-| n    | `<leader>ff`     | Find files           | Find files                     |
-| n    | `<leader>fg`     | Git files            | Find git files                 |
-| n    | `<leader>fp`     | Projects             | Find projects                  |
-| n    | `<leader>fr`     | Recent files         | Find recent files              |
+| Mode | Keymap            | Action           | Description          |
+| ---- | ----------------- | ---------------- | -------------------- |
+| n    | `<leader><space>` | Smart find files | Smart file finder    |
+| n    | `<leader>,`       | Buffers          | Show open buffers    |
+| n    | `<leader>/`       | Grep             | Live grep search     |
+| n    | `<leader>:`       | Command history  | Show command history |
+| n    | `<leader>e`       | File explorer    | Open file explorer   |
+| n    | `<leader>fb`      | Buffers          | Find buffers         |
+| n    | `<leader>fc`      | Config files     | Find config files    |
+| n    | `<leader>ff`      | Find files       | Find files           |
+| n    | `<leader>fg`      | Git files        | Find git files       |
+| n    | `<leader>fp`      | Projects         | Find projects        |
+| n    | `<leader>fr`      | Recent files     | Find recent files    |
 
 ## Git Operations
 
-| Mode | Keymap       | Action           | Description                    |
-| ---- | ------------ | ---------------- | ------------------------------ |
-| n    | `<leader>gb` | Git branches     | Show git branches              |
-| n    | `<leader>gl` | Git log          | Show git log                   |
-| n    | `<leader>gL` | Git log line     | Show git log for current line  |
-| n    | `<leader>gs` | Git status       | Show git status                |
-| n    | `<leader>gS` | Git stash        | Show git stash                 |
-| n    | `<leader>gd` | Git diff         | Show git diff (hunks)          |
-| n    | `<leader>gf` | Git log file     | Show git log for current file  |
-| n    | `<leader>gg` | Lazygit          | Open Lazygit                   |
-| n    | `<leader>gB` | Git browse       | Browse git repository          |
-| n,v  | `<leader>gB` | Git browse       | Browse git repository (visual) |
+| Mode | Keymap       | Action       | Description                    |
+| ---- | ------------ | ------------ | ------------------------------ |
+| n    | `<leader>gb` | Git branches | Show git branches              |
+| n    | `<leader>gl` | Git log      | Show git log                   |
+| n    | `<leader>gL` | Git log line | Show git log for current line  |
+| n    | `<leader>gs` | Git status   | Show git status                |
+| n    | `<leader>gS` | Git stash    | Show git stash                 |
+| n    | `<leader>gd` | Git diff     | Show git diff (hunks)          |
+| n    | `<leader>gf` | Git log file | Show git log for current file  |
+| n    | `<leader>gg` | Lazygit      | Open Lazygit                   |
+| n    | `<leader>gB` | Git browse   | Browse git repository          |
+| n,v  | `<leader>gB` | Git browse   | Browse git repository (visual) |
 
 ## Search Operations
 
-| Mode | Keymap       | Action              | Description                    |
-| ---- | ------------ | ------------------- | ------------------------------ |
-| n    | `<leader>sb` | Buffer lines        | Search buffer lines            |
-| n    | `<leader>sB` | Grep open buffers   | Grep in open buffers           |
-| n    | `<leader>sg` | Grep                | Live grep                      |
-| n,x  | `<leader>sw` | Word/selection      | Search word or visual selection |
-| n    | `<leader>s"` | Registers           | Search registers               |
-| n    | `<leader>s/` | Search history      | Search history                 |
-| n    | `<leader>sa` | Autocmds            | Search autocmds                |
-| n    | `<leader>sc` | Command history     | Search command history         |
-| n    | `<leader>sC` | Commands            | Search commands                |
-| n    | `<leader>sd` | Diagnostics         | Search diagnostics             |
-| n    | `<leader>sD` | Buffer diagnostics  | Search buffer diagnostics      |
-| n    | `<leader>sh` | Help pages          | Search help pages              |
-| n    | `<leader>sH` | Highlights          | Search highlights              |
-| n    | `<leader>si` | Icons               | Search icons                   |
-| n    | `<leader>sj` | Jumps               | Search jumps                   |
-| n    | `<leader>sk` | Keymaps             | Search keymaps                 |
-| n    | `<leader>sl` | Location list       | Search location list           |
-| n    | `<leader>sm` | Marks               | Search marks                   |
-| n    | `<leader>sM` | Man pages           | Search man pages               |
-| n    | `<leader>sp` | Plugin spec         | Search plugin specs            |
-| n    | `<leader>sq` | Quickfix list       | Search quickfix list           |
-| n    | `<leader>sR` | Resume              | Resume last search             |
-| n    | `<leader>sr` | Search and replace  | Search and replace (GrugFar)   |
-| n,v  | `<leader>sr` | Search and replace  | Search and replace (visual)    |
-| n    | `<leader>ss` | LSP symbols         | Search LSP symbols             |
-| n    | `<leader>sS` | LSP workspace symbols | Search LSP workspace symbols |
-| n    | `<leader>su` | Undo history        | Search undo history            |
+| Mode | Keymap       | Action                | Description                     |
+| ---- | ------------ | --------------------- | ------------------------------- |
+| n    | `<leader>sb` | Buffer lines          | Search buffer lines             |
+| n    | `<leader>sB` | Grep open buffers     | Grep in open buffers            |
+| n    | `<leader>sg` | Grep                  | Live grep                       |
+| n,x  | `<leader>sw` | Word/selection        | Search word or visual selection |
+| n    | `<leader>s"` | Registers             | Search registers                |
+| n    | `<leader>s/` | Search history        | Search history                  |
+| n    | `<leader>sa` | Autocmds              | Search autocmds                 |
+| n    | `<leader>sc` | Command history       | Search command history          |
+| n    | `<leader>sC` | Commands              | Search commands                 |
+| n    | `<leader>sd` | Diagnostics           | Search diagnostics              |
+| n    | `<leader>sD` | Buffer diagnostics    | Search buffer diagnostics       |
+| n    | `<leader>sh` | Help pages            | Search help pages               |
+| n    | `<leader>sH` | Highlights            | Search highlights               |
+| n    | `<leader>si` | Icons                 | Search icons                    |
+| n    | `<leader>sj` | Jumps                 | Search jumps                    |
+| n    | `<leader>sk` | Keymaps               | Search keymaps                  |
+| n    | `<leader>sl` | Location list         | Search location list            |
+| n    | `<leader>sm` | Marks                 | Search marks                    |
+| n    | `<leader>sM` | Man pages             | Search man pages                |
+| n    | `<leader>sp` | Plugin spec           | Search plugin specs             |
+| n    | `<leader>sq` | Quickfix list         | Search quickfix list            |
+| n    | `<leader>sR` | Resume                | Resume last search              |
+| n    | `<leader>sr` | Search and replace    | Search and replace (GrugFar)    |
+| n,v  | `<leader>sr` | Search and replace    | Search and replace (visual)     |
+| n    | `<leader>ss` | LSP symbols           | Search LSP symbols              |
+| n    | `<leader>sS` | LSP workspace symbols | Search LSP workspace symbols    |
+| n    | `<leader>su` | Undo history          | Search undo history             |
 
 ## Flash (Quick Navigation)
 
-| Mode  | Keymap   | Action              | Description                    |
-| ----- | -------- | ------------------- | ------------------------------ |
-| n,x,o | `s`      | Flash               | Flash jump                     |
-| n,o,x | `S`      | Flash treesitter    | Flash treesitter               |
-| o     | `r`      | Remote flash        | Remote flash                   |
-| o,x   | `R`      | Treesitter search   | Treesitter search              |
-| c     | `<c-s>`  | Toggle flash search | Toggle flash search            |
+| Mode  | Keymap  | Action              | Description         |
+| ----- | ------- | ------------------- | ------------------- |
+| n,x,o | `s`     | Flash               | Flash jump          |
+| n,o,x | `S`     | Flash treesitter    | Flash treesitter    |
+| o     | `r`     | Remote flash        | Remote flash        |
+| o,x   | `R`     | Treesitter search   | Treesitter search   |
+| c     | `<c-s>` | Toggle flash search | Toggle flash search |
 
 ## Surround Operations (Mini.surround)
 
-| Mode | Keymap | Action                | Description                    |
-| ---- | ------ | --------------------- | ------------------------------ |
-| n,v  | `gsa`  | Add surrounding       | Add surrounding                |
-| n    | `gsd`  | Delete surrounding    | Delete surrounding             |
-| n    | `gsf`  | Find right surrounding | Find surrounding (to the right) |
-| n    | `gsF`  | Find left surrounding | Find surrounding (to the left) |
-| n    | `gsh`  | Highlight surrounding | Highlight surrounding          |
-| n    | `gsr`  | Replace surrounding   | Replace surrounding            |
-| n    | `gsn`  | Update n_lines        | Update `MiniSurround.config.n_lines` |
+| Mode | Keymap | Action                 | Description                          |
+| ---- | ------ | ---------------------- | ------------------------------------ |
+| n,v  | `gsa`  | Add surrounding        | Add surrounding                      |
+| n    | `gsd`  | Delete surrounding     | Delete surrounding                   |
+| n    | `gsf`  | Find right surrounding | Find surrounding (to the right)      |
+| n    | `gsF`  | Find left surrounding  | Find surrounding (to the left)       |
+| n    | `gsh`  | Highlight surrounding  | Highlight surrounding                |
+| n    | `gsr`  | Replace surrounding    | Replace surrounding                  |
+| n    | `gsn`  | Update n_lines         | Update `MiniSurround.config.n_lines` |
 
 ## UI Toggles
 
-| Mode | Keymap       | Action                | Description                    |
-| ---- | ------------ | --------------------- | ------------------------------ |
-| n    | `<leader>us` | Toggle spelling       | Toggle spell checking          |
-| n    | `<leader>uw` | Toggle wrap           | Toggle line wrapping           |
-| n    | `<leader>uL` | Toggle relative number | Toggle relative line numbers  |
-| n    | `<leader>ud` | Toggle diagnostics    | Toggle diagnostics             |
-| n    | `<leader>ul` | Toggle line number    | Toggle line numbers            |
-| n    | `<leader>uc` | Toggle conceallevel   | Toggle conceallevel            |
-| n    | `<leader>uT` | Toggle treesitter     | Toggle treesitter              |
-| n    | `<leader>ub` | Toggle background     | Toggle dark/light background   |
-| n    | `<leader>uh` | Toggle inlay hints    | Toggle inlay hints             |
-| n    | `<leader>ug` | Toggle indent         | Toggle indent guides           |
-| n    | `<leader>uD` | Toggle dim            | Toggle dim inactive            |
-| n    | `<leader>uC` | Colorschemes          | Choose colorscheme             |
-| n    | `<leader>un` | Dismiss notifications | Dismiss all notifications      |
-| n    | `uz`         | Toggle zen mode       | Toggle zen mode                |
-| n    | `uZ`         | Toggle zoom           | Toggle zoom                    |
+| Mode | Keymap       | Action                 | Description                  |
+| ---- | ------------ | ---------------------- | ---------------------------- |
+| n    | `<leader>us` | Toggle spelling        | Toggle spell checking        |
+| n    | `<leader>uw` | Toggle wrap            | Toggle line wrapping         |
+| n    | `<leader>uL` | Toggle relative number | Toggle relative line numbers |
+| n    | `<leader>ud` | Toggle diagnostics     | Toggle diagnostics           |
+| n    | `<leader>ul` | Toggle line number     | Toggle line numbers          |
+| n    | `<leader>uc` | Toggle conceallevel    | Toggle conceallevel          |
+| n    | `<leader>uT` | Toggle treesitter      | Toggle treesitter            |
+| n    | `<leader>ub` | Toggle background      | Toggle dark/light background |
+| n    | `<leader>uh` | Toggle inlay hints     | Toggle inlay hints           |
+| n    | `<leader>ug` | Toggle indent          | Toggle indent guides         |
+| n    | `<leader>uD` | Toggle dim             | Toggle dim inactive          |
+| n    | `<leader>uC` | Colorschemes           | Choose colorscheme           |
+| n    | `<leader>un` | Dismiss notifications  | Dismiss all notifications    |
+| n    | `uz`         | Toggle zen mode        | Toggle zen mode              |
+| n    | `uZ`         | Toggle zoom            | Toggle zoom                  |
 
 ## Terminal
 
-| Mode | Keymap   | Action          | Description                    |
-| ---- | -------- | --------------- | ------------------------------ |
-| n    | `<c-/>`  | Toggle terminal | Toggle terminal                |
-| n    | `<c-_>`  | Toggle terminal | Toggle terminal (alternative)  |
+| Mode | Keymap  | Action          | Description                   |
+| ---- | ------- | --------------- | ----------------------------- |
+| n    | `<c-/>` | Toggle terminal | Toggle terminal               |
+| n    | `<c-_>` | Toggle terminal | Toggle terminal (alternative) |
 
 ## Miscellaneous
 
-| Mode | Keymap       | Action                | Description                    |
-| ---- | ------------ | --------------------- | ------------------------------ |
-| n    | `<leader>l`  | Lazy                  | Open Lazy plugin manager       |
-| n    | `<leader>n`  | Notification history  | Show notification history      |
-| n    | `<leader>N`  | Neovim news           | Show Neovim news               |
-| n    | `<leader>.`  | Scratch buffer        | Toggle scratch buffer          |
-| n    | `<leader>S`  | Select scratch buffer | Select scratch buffer          |
-| n    | `<leader>cR` | Rename file           | Rename current file            |
-| n,t  | `]]`         | Next reference        | Jump to next reference         |
-| n,t  | `[[`         | Prev reference        | Jump to previous reference     |
+| Mode | Keymap       | Action                | Description                |
+| ---- | ------------ | --------------------- | -------------------------- |
+| n    | `<leader>l`  | Lazy                  | Open Lazy plugin manager   |
+| n    | `<leader>n`  | Notification history  | Show notification history  |
+| n    | `<leader>N`  | Neovim news           | Show Neovim news           |
+| n    | `<leader>.`  | Scratch buffer        | Toggle scratch buffer      |
+| n    | `<leader>S`  | Select scratch buffer | Select scratch buffer      |
+| n    | `<leader>cR` | Rename file           | Rename current file        |
+| n,t  | `]]`         | Next reference        | Jump to next reference     |
+| n,t  | `[[`         | Prev reference        | Jump to previous reference |
 
 ## Which-Key Groups (Leader Key Prefixes)
 
@@ -342,6 +342,18 @@ This document provides a comprehensive overview of all keymaps configured in thi
 - **c** = Command-line mode
 
 ## Important Notes
+
+- Inorder to use Lazy git Install Lazy Git In Your System and add this to ~/.config/lazygit/config.yml
+
+```yml
+gui:
+  theme:
+    lightTheme: false
+git:
+  autoFetch: true
+  autoRefresh: true
+confirmOnQuit: false
+```
 
 - **Leader key** is set to `SPACE`
 - Most keymaps support count prefixes (e.g., `3j` moves 3 lines down)
