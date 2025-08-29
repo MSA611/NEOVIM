@@ -1,13 +1,4 @@
--- vim.g.python3_host_prog = os.getenv("HOME") .. '/virtualenvs/nvim-venv/bin/python' -- python code environment
-
-vim.opt.spell = true
-vim.opt.encoding = "utf-8" -- set encoding
-vim.opt.nu = true -- enable line numbers
-vim.opt.relativenumber = true -- relative line numbers
-vim.opt.cursorline = true --Setting Cursor Line
-
-vim.opt.cursorline = true
---setting up the colors for the lines and the line number
+vim.cmd("colorscheme onedark_dark") --setup the colorscheme
 
 -- Gold/yellow color and bold for active line number (cursor line)
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFD700", bold = true })
@@ -15,116 +6,51 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFD700", bold = true })
 -- Gray for inactive line numbers
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#808080" })
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true -- convert tabs to spaces
-vim.wo.wrap = false -- do not wrap lines
-vim.opt.autoindent = true -- auto indentation
-vim.opt.list = true -- show tab characters and trailing whitespace
-vim.opt.formatoptions:remove("t") -- no auto-intent of line breaks, keep line wrap enabled
-vim.opt.listchars = "tab:»\\ ,extends:›,precedes:‹,nbsp:·,trail:·" -- show tab characters and trailing whitespace
-
-vim.opt.ignorecase = false -- ignore case when searching
-vim.opt.smartcase = true -- unless capital letter in search
-
-vim.opt.swapfile = false -- do not use a swap file for the buffer
-vim.opt.backup = false -- do not keep a backup file
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- set directory where undo files are stored
-vim.opt.undofile = true -- save undo history to a file
-
 vim.opt.hlsearch = true -- do not highlight all matches on previous search pattern
 vim.opt.incsearch = true -- incrementally highlight searches as you type
 
-vim.opt.termguicolors = true -- enable true color support
+vim.o.number = true -- enables number lines
+vim.o.relativenumber = true -- enables relativenumber lines
+vim.o.tabstop = 2 -- 2 spaces for tab-key
+vim.o.autoindent = true -- autoindent easily
+vim.o.smartindent = true -- smartindent
+vim.o.shiftwidth = 2 -- 2 spaces for indentation
+vim.o.wrap = true -- wrap the line
+vim.o.laststatus = 3 -- status line
+vim.o.ignorecase = true -- for non-case-sensitive search
+vim.o.smartcase = true -- for upper-case search
+vim.o.hlsearch = true -- true highlighting on search
+vim.o.cursorline = true -- enable's the cursor line
+vim.o.termguicolors = true -- use's terminal gui color's
+vim.o.background = "dark" -- for dark background
+vim.o.signcolumn = "yes" -- trust me bro (like it has to do with the indentation like ui)
+vim.o.backspace = "indent,eol,start" -- just to work our backspace key properly
+vim.o.splitright = true -- for splitting the window to right
+vim.o.splitbelow = true -- for splitting the window to bottom
+vim.o.backup = false -- to not take backup
+vim.o.writebackup = false -- to not write a backup file
+vim.o.swapfile = false -- not to save the file in swap
+vim.o.scrolloff = 10 -- scroll before 10 line
+vim.o.clipboard = "unnamedplus" -- to copy something from neovim to the system clipboard
+vim.o.fillchars = "eob: " -- to remove tilder sign at the end of buffer "~"
+vim.o.breakindent = true -- enable break indent
+vim.o.undofile = true -- enable to undo which you have worked on
+vim.o.showmode = false -- cause I am using lualine I don't need this
 
-vim.opt.scrolloff = 8 -- minimum number of lines to keep above and below the cursor
-vim.opt.sidescrolloff = 8 --minimum number of columns to keep above and below the cursor
-vim.opt.signcolumn = "yes" -- always show the sign column, to avoid text shifting when signs are displayed
-vim.opt.isfname:append("@-@") -- include '@' in the set of characters considered part of a file name
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
-vim.opt.updatetime = 50 -- Time in milliseconds to wait before triggering the plugin events after a change
+-- Neovide Padding Opts
+vim.g.neovide_padding_top = 20
+vim.g.neovide_padding_bottom = 10
+vim.g.neovide_padding_right = 15
+vim.g.neovide_padding_left = 15
 
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-	pattern = "*.py",
+-- autocmd for Markdown files
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown" or "mdx",
 	callback = function()
-		vim.opt.textwidth = 79
-		vim.opt.colorcolumn = "79"
-	end,
-}) -- python formatting
-
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-	pattern = { "*.js", "*.html", "*.css", "*.lua" },
-	callback = function()
-		vim.opt.tabstop = 2
-		vim.opt.softtabstop = 2
-		vim.opt.shiftwidth = 2
-	end,
-}) -- javascript formatting
-
-vim.api.nvim_create_autocmd("BufReadPost", {
-	pattern = "*",
-	callback = function()
-		if vim.fn.line("'\"") > 0 and vim.fn.line("'\"") <= vim.fn.line("$") then
-			vim.cmd('normal! g`"')
-		end
-	end,
-}) -- return to last edit position when opening files
-
-local HighlightYank = vim.api.nvim_create_augroup("HighlightYank", {})
-vim.api.nvim_create_autocmd("TextYankPost", {
-	group = HighlightYank,
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank({
-			higroup = "IncSearch",
-			timeout = 40,
-		})
-	end,
-}) -- highlight yanked text using the 'IncSearch' highlight group for 40ms
-
-local CleanOnSave = vim.api.nvim_create_augroup("CleanOnSave", {})
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	group = CleanOnSave,
-	pattern = "*",
-	command = [[%s/\s\+$//e]],
-}) -- remove trailing whitespace from all lines before saving a file)
-
--- local Black = vim.api.nvim_create_augroup("Black", { clear = true })
--- vim.api.nvim_create_autocmd("bufWritePost", {
---   group = Black,
---   pattern = "*.py",
---   command = "silent !black %",
--- })
-
-local Prettier = vim.api.nvim_create_augroup("Prettier", { clear = true })
-vim.api.nvim_create_autocmd("bufWritePost", {
-	group = Prettier,
-	pattern = "*.vue",
-	command = "silent !node_modules/.bin/prettier % -w",
-})
-
-local RuffSort = vim.api.nvim_create_augroup("RuffSort", { clear = true })
-vim.api.nvim_create_autocmd("bufWritePost", {
-	group = RuffSort,
-	pattern = "*.py",
-	callback = function()
-		vim.cmd("silent !ruff check --select I --fix %")
-		vim.cmd("silent !ruff format %")
-	end,
-})
-
--- Enable JSON folding
--- `zc` to close a fold
--- `zo` to open a fold
--- `za` to toggle a fold
--- `zR` to open all folds
--- `zM` to close all folds
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-	pattern = "*.json",
-	callback = function()
-		vim.opt_local.foldmethod = "syntax"
-		vim.opt_local.foldenable = true
-		vim.opt_local.foldlevel = 99 -- Start with all folds open
+		vim.opt.conceallevel = 1 -- required for markdown.nvim
 	end,
 })
